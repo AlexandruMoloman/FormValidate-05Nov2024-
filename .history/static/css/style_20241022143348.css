@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  background: linear-gradient(to right, black, darkred);
+  justify-content: center;
+}
+
+h1 {
+  font-size: 5rem;
+  color: white;
+}
+
+form {
+  margin-top: 5rem;
+  border: none;
+}
+
+input,
+button {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+ul {
+  color: red;
+  list-style-type: none;
+}

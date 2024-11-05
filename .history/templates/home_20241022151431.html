@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <h1>Hi I am Html</h1>
+    <p>{{ message }}</p>
+
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <ul>
+      {% for msg in messages %}
+      <li style="color: red">{{ msg }}</li>
+      {% endfor %}
+    </ul>
+
+    {% endif %} {% endwith %}
+
+    <form action="/greet" method="POST" style="display: flex">
+      <label for="name">Enter Your Name: </label>
+      <input type="text" id="name" name="name" required style="display: flex" />
+      <label for="surname">Enter Your Surname: </label>
+      <input type="text" id="surname" name="surname" required style="display: flex" />
+      <button type="submit" value="submit" style="display: flex">Submit</button>
+    </form>
+  </body>
+</html>
